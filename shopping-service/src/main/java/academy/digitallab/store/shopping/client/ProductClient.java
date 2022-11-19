@@ -16,5 +16,5 @@ public interface ProductClient {
     public ResponseEntity<Product> getProduct(@PathVariable("id") Long id);
 
     @GetMapping(value = "/{id}/stock")
-    public ResponseEntity<Product> updateStockProduct(@PathVariable  Long id ,@RequestParam(name = "quantity", required = true) Double quantity);
+    public void updateStockProduct(@PathVariable  Long id , @RequestParam(name = "quantity", required = true) Double quantity);
     }
